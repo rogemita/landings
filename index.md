@@ -1,8 +1,5 @@
 ---
 layout: default
-title: Red Origen
+title: ORIGEN Cooperativa De Trabajo LTD.
+subtitle: Este sitio institucional está en construcción. Muy pronto encontrarás toda la información sobre nuestros servicios.
 ---
-
-# 🌱 Red Origen
-
-Este sitio institucional está en construcción. Muy pronto encontrarás toda la información sobre nuestros servicios.

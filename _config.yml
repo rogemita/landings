@@ -1,6 +1,6 @@
 title: Red Origen
-description: Cooperativa de terapias cannábicas
+description: Cooperativa de trabajo para terapias cannábicas
 author: Cooperativa Origen
 baseurl: "" # Dejar vacío si es en la raíz
 url: "https://redorigen.com.ar"
-theme: minima
+theme: 

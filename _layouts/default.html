@@ -11,12 +11,15 @@
     {% include header.html %}
     {% include whatsapp.html %}
 
-    <!-- Hero Section (institucional) -->
-    <header class="hero bg-primary text-light py-5">
-      <div class="container text-center">
-        <h1 class="display-4 fw-bold">{{ site.title }}</h1>
-        <p class="lead">{{ site.description }}</p>
-      </div>
+    <!-- Hero Section with Parallax -->
+    <header class="hero position-relative">
+        <div class="container hero-overlay text-center text-white position-absolute bottom-0 start-50 translate-middle-x mb-5 p-4">
+            {% if page.include_path %}
+              {% include {{ page.include_path }}/hero_content.html %}
+            {% else %}
+              {% include hero_content.html %}
+            {% endif %}
+        </div>
     </header>
 
     <main class="container my-5">
