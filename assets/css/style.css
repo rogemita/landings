@@ -1,9 +1,13 @@
 :root {
   --verde-oscuro: rgb(26, 96, 26);
   --verde-radiante: rgb(126, 176, 14);
+  --bs-success: 26, 96, 26; /* rgb sin “rgb()” porque Bootstrap usa la coma */
+  --bs-success-rgb: 26, 96, 26;
+  --bs-success-text: rgb(26, 96, 26); /* texto */
+  --bs-success-bg-subtle: rgb(235, 250, 235); /* fondos suaves */
 }
 
-h1, h2, h3 {
+h1, h2, h3, .text-success {
   color: var(--verde-oscuro);
 }
 
@@ -15,6 +19,11 @@ h1, h2, h3 {
     color: var(--verde-oscuro);
     font-weight: 600;       /* opcional: texto más marcado */
     transition: color 0.3s ease;
+}
+
+.navbar-custom .nav-link.active {
+    color: white;
+    font-weight: bold;
 }
 
 .navbar-custom .nav-link:hover,
@@ -50,6 +59,7 @@ body {
     box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Sombra suave */
     backdrop-filter: blur(5px);         /* Difumina el fondo (opcional) */
     color: white;
+    transition: background 0.5s ease, backdrop-filter 0.5s ease;
 }
 
 .btn-xl {
@@ -138,7 +148,7 @@ footer {
         background-image: url('/assets/img/cover-origen-mobile.jpg');
         background-attachment: scroll; /* Evita problemas con parallax en móviles */
         background-size: cover;
-        background-position: 0px -40px 0px 0px;
+        background-position: center top;
         height: 100vh;
     }
 }
