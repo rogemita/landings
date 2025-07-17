@@ -50,6 +50,20 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.lista-indicaciones {
+    list-style: none; /* Quita los bullets por defecto */
+    padding: 0;
+    margin: 0;
+}
+
+.lista-indicaciones li {
+    background: url('/assets/img/animal-icon.png') no-repeat left center;
+    background-size: 24px 24px; /* Tamaño del ícono */
+    padding-left: 36px; /* Espacio para el ícono */
+    line-height: 1.6;
+    text-align: left;
+}
+
 footer {
     background-color: #f8f9fa;
     color: #6c757d;
