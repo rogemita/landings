@@ -1,5 +1,33 @@
+:root {
+  --verde-oscuro: rgb(26, 96, 26);
+  --verde-radiante: rgb(126, 176, 14);
+}
+
+h1, h2, h3 {
+  color: var(--verde-oscuro);
+}
+
+.navbar-custom {
+    background-color: var(--verde-radiante);
+}
+
+.navbar-custom .nav-link {
+    color: var(--verde-oscuro);
+    font-weight: 600;       /* opcional: texto más marcado */
+    transition: color 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link:focus {
+    color: white; /* al pasar el mouse cambia a blanco */
+}
+
+.titulo-principal {
+  color: white;
+}
+
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .hero {
@@ -13,15 +41,31 @@ body {
 }
 
 .hero-overlay {
-    background: linear-gradient(
-        135deg,
-        rgba(90, 193, 70, 0.85),  /* tono verde claro translúcido */
-        rgba(34, 139, 34, 0.85)   /* tono verde más oscuro translúcido */
-    );
+    /*background: linear-gradient(
+        35deg,
+        var(--verde-radiante),
+        var(--verde-oscuro)
+    );*/
     border-radius: 20px;                /* Bordes redondeados */
     box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Sombra suave */
     backdrop-filter: blur(5px);         /* Difumina el fondo (opcional) */
     color: white;
+}
+
+.btn-xl {
+    padding: 1.25rem 2.5rem; /* más grande que btn-lg */
+    font-size: 1.75rem;
+    border-radius: 0.6rem;
+}
+
+.btn-success {
+  background-color: var(--verde-radiante);
+  border-color: var(--verde-radiante);
+}
+
+.btn-success:hover {
+  background-color: var(--verde-oscuro);
+  border-color: var(--verde-oscuro);
 }
 
 .whatsapp-float {
@@ -62,6 +106,25 @@ body {
     padding-left: 36px; /* Espacio para el ícono */
     line-height: 1.6;
     text-align: left;
+}
+
+.list-arrow {
+    list-style: none;
+    padding: 0;
+}
+
+.list-arrow li {
+    position: relative;
+    padding-left: 1.5em; /* espacio para la flecha */
+}
+
+.list-arrow li::before {
+    content: ">>"; /* Glifo de Source */
+    position: absolute;
+    left: 0;
+    color: #5AC146; /* Verde a tono con tu estilo */
+    font-size: 1.2em;
+    line-height: 1;
 }
 
 footer {
