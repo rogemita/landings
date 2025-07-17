@@ -1,6 +1,7 @@
 body {
     font-family: 'Poppins', sans-serif;
 }
+
 .hero {
     background-image: url('/assets/img/cover-origen.jpg');
     background-attachment: fixed;
@@ -10,6 +11,7 @@ body {
     color: white;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
 }
+
 .hero-overlay {
     background: linear-gradient(
         135deg,
@@ -21,13 +23,45 @@ body {
     backdrop-filter: blur(5px);         /* Difumina el fondo (opcional) */
     color: white;
 }
+
 .whatsapp-float {
     position: fixed;
     bottom: 20px;
     right: 20px;
     z-index: 999;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
+.whatsapp-float img {
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover en desktop */
+.whatsapp-float:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Active en mobile o click en desktop */
+.whatsapp-float:active img {
+    transform: scale(0.95);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 footer {
     background-color: #f8f9fa;
     color: #6c757d;
+}
+
+/* Cambia la imagen para pantallas md y menores (<=768px) */
+@media (max-width: 768px) {
+    .hero {
+        background-image: url('/assets/img/cover-origen-mobile.jpg');
+        background-attachment: scroll; /* Evita problemas con parallax en móviles */
+        background-size: cover;
+        background-position: 0px -40px 0px 0px;
+        height: 100vh;
+    }
 }
