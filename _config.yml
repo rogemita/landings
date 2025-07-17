@@ -4,3 +4,7 @@ author: Cooperativa Origen
 baseurl: "" # Dejar vacío si es en la raíz
 url: "https://redorigen.com.ar"
 theme: 
+collections:
+  terapias:
+    output: true
+    permalink: /:name/

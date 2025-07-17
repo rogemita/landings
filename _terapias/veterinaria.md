@@ -3,6 +3,7 @@ layout: default
 title: Terapia Cannábica para Mascotas
 subtitle: Bienestar natural para tu compañero de vida
 include_path: tratamientos/veterinaria
+order: 1
 ---
 
 <main>

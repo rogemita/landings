@@ -1,9 +1,26 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-    <a class="navbar-brand" href="{{ '/' | relative_url }}">Red Origen</a>
-    <div>
-      <a class="nav-link text-light d-inline" href="{{ '/veterinaria.html' | relative_url }}">Veterinaria</a>
-      <a class="nav-link text-light d-inline" href="{{ '/' | relative_url }}">Quienes somos</a>
+    <div class="container">
+        <a class="navbar-brand" href="{{ '/' | relative_url }}">
+            <img src="{{ '/assets/img/logo origen base blanco.png' | relative_url }}" alt="Origen Logo" height="50">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ '/' | relative_url }}">Inicio</a>
+                </li>
+                {% assign sorted_terapias = site.terapias | sort: "order" %}
+                {% for terapia in sorted_terapias %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ terapia.url }}">{{ terapia.title }}</a>
+                    </li>
+                {% endfor %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ '/quienes-somos/' | relative_url }}">Quiénes somos</a>
+                </li>
+            </ul>
+      </div>
     </div>
-  </div>
 </nav>
