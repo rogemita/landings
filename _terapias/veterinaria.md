@@ -7,11 +7,11 @@ order: 1
 ---
 
 <main>
-  <section id="que-ofrecemos" class="py-5">
+  <section id="que-ofrecemos" class="bg-textura-verde">
     {% include {{ page.include_path }}/que_ofrecemos.html %}
   </section>
 
-  <section id="indicaciones" class="py-5 bg-light">
+  <section id="indicaciones" class="bg-textura-verde">
     {% include {{ page.include_path }}/indicaciones.html %}
   </section>
 

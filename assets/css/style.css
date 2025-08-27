@@ -73,6 +73,11 @@ body {
   color: #212529;
 }
 
+.main {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
 /* Títulos */
 
 h1, h2, h3, h4, h5, h6 {
@@ -278,6 +283,38 @@ h1, h2, h3, h4, h5, h6 {
 /* Active en mobile o click en desktop */
 .whatsapp-float:active img {
     transform: scale(1.10);
+}
+
+.bg-textura-verde {
+  background-image: url('/assets/img/textura_2.jpg'); /* o textura-1.jpeg si preferís */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #104d1f; /* fallback sólido */
+  color: white;
+}
+
+.flechas-invertidas {
+  transform: scaleX(-1);
+}
+
+.bg-highlight {
+  background-color: var(--verde-radiante);
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.rounded-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: white;
+  border: 2px solid var(--verde-radiante);
+  border-radius: 2rem;
+  padding: 0.4rem 1.5rem;
+  background-color: transparent;
+  display: inline-block;
 }
 
 .lista-indicaciones {
