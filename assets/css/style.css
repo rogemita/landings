@@ -103,7 +103,7 @@ h1, h2, h3, h4, h5, h6 {
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    height: 90vh;
+    height: 100vh;
     color: white;
     padding-top: var(--navbar-height);
 }
@@ -286,6 +286,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bg-textura-verde {
+  background-image: url('/assets/img/textura_1.jpg'); /* o textura-1.jpeg si preferís */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #104d1f; /* fallback sólido */
+  color: white;
+}
+
+.bg-textura-verde-logo {
   background-image: url('/assets/img/textura_2.jpg'); /* o textura-1.jpeg si preferís */
   background-size: cover;
   background-position: center;

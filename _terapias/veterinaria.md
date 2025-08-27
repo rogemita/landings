@@ -15,7 +15,11 @@ order: 1
     {% include {{ page.include_path }}/indicaciones.html %}
   </section>
 
-  <section id="como-funciona" class="py-5">
+  <section id="banner_follow_us" class="">
+    {% include banner_follow_us.html %}
+  </section>
+
+  <section id="como-funciona" class="bg-textura-verde-logo">
     {% include {{ page.include_path }}/como_funciona.html %}
   </section>
 
