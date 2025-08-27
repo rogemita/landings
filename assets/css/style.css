@@ -1,7 +1,7 @@
 :root {
   --verde-oscuro: rgb(26, 96, 26);
-  --verde-radiante: rgba(99, 176, 0, 255);
-  --verde-radiante-translucido: rgba(99, 176, 0, 0.45);
+  --verde-radiante: rgb(126, 174, 14);
+  --verde-radiante-translucido: rgba(126, 174, 14, 0.45);
   --bs-success: 26, 96, 26; /* rgb sin “rgb()” porque Bootstrap usa la coma */
   --bs-success-rgb: 26, 96, 26;
   --bs-success-text: rgb(26, 96, 26); /* texto */
