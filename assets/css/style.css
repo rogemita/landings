@@ -1,24 +1,46 @@
 :root {
   --verde-oscuro: rgb(26, 96, 26);
-  --verde-radiante: rgb(126, 176, 14);
+  --verde-radiante: rgba(99, 176, 0, 255);
+  --verde-radiante-translucido: rgba(99, 176, 0, 0.45);
   --bs-success: 26, 96, 26; /* rgb sin “rgb()” porque Bootstrap usa la coma */
   --bs-success-rgb: 26, 96, 26;
   --bs-success-text: rgb(26, 96, 26); /* texto */
   --bs-success-bg-subtle: rgb(235, 250, 235); /* fondos suaves */
-}
-
-h1, h2, h3, .text-success {
-  color: var(--verde-oscuro);
+  --navbar-height: 80px;
 }
 
 .navbar-custom {
-    background-color: var(--verde-radiante);
+  background-color: var(--verde-radiante-translucido);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: none;
+  box-shadow: none;
 }
 
+/* Estilos base para todos los links del navbar */
 .navbar-custom .nav-link {
-    color: var(--verde-oscuro);
-    font-weight: 600;       /* opcional: texto más marcado */
-    transition: color 0.3s ease;
+  color: white !important;
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  padding: 0.5rem 1rem;
+}
+
+/* Estilo para "Sobre nosotros" si es el segundo */
+.navbar-custom .nav-item .nav-link {
+  font-style: italic;
+}
+
+/* Hover para todos */
+.navbar-custom .nav-link:hover {
+  color: white;
+  text-decoration: underline;
 }
 
 .navbar-custom .nav-link.active {
@@ -26,41 +48,176 @@ h1, h2, h3, .text-success {
     font-weight: bold;
 }
 
+/* Sobre nosotros en itálica */
+.navbar-custom .nav-link.fst-italic {
+  font-style: italic;
+}
+
 .navbar-custom .nav-link:hover,
 .navbar-custom .nav-link:focus {
-    color: white; /* al pasar el mouse cambia a blanco */
+  color: #fff;
 }
 
 .titulo-principal {
   color: white;
+  font-size: 4.5rem;
+  font-weight: 800;
+  line-height: .95;
 }
 
 body {
-    font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400; /* regular para el cuerpo de texto */
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #212529;
 }
+
+/* Títulos */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700; /* bold */
+  margin-bottom: 1rem;
+  line-height: 1.25;
+  color: var(--verde-oscuro);
+}
+
+.text-success {
+  color: var(--verde-oscuro);
+}
+
+.lead, .subtitulo-hero, .section-intro {
+  font-weight: 400; /* regular */
+  font-size: 1.125rem;
+}
+
+/* Ajustes específicos para hero */
 
 .hero {
     background-image: url('/assets/img/cover-origen.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    height: 92vh;
+    height: 90vh;
     color: white;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    padding-top: var(--navbar-height);
+}
+
+.hero.veterinaria {
+    background-image: url('/assets/img/cover-veterinaria.png');
+}
+
+/* Cambia la imagen para pantallas md y menores (<=768px) */
+@media (max-width: 768px) {
+    .hero {
+        background-image: url('/assets/img/cover-origen-mobile.jpg');
+        background-attachment: scroll; /* Evita problemas con parallax en móviles */
+        background-size: cover;
+        background-position: center top;
+        height: 100vh;
+    }
+
+    .hero.veterinaria {
+        background-image: url('/assets/img/cover-veterinaria-mobile.png');
+    }
 }
 
 .hero-overlay {
-    /*background: linear-gradient(
-        35deg,
-        var(--verde-radiante),
-        var(--verde-oscuro)
-    );*/
-    border-radius: 20px;                /* Bordes redondeados */
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Sombra suave */
-    backdrop-filter: blur(5px);         /* Difumina el fondo (opcional) */
-    color: white;
-    transition: background 0.5s ease, backdrop-filter 0.5s ease;
+  text-align: left;
 }
+
+.hero-text-block {
+  max-width: 600px;
+  text-align: left;
+}
+
+.hero-text-block .titulo-principal,
+.hero-text-block .subtitulo-hero,
+.hero-text-block .btn-solicitar-turno {
+  align-self: flex-start;
+  text-align: left;
+}
+
+.subtitulo-hero {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.btn-solicitar-turno {
+  background-color: var(--verde-radiante);
+  color: white;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-size: 1.4rem;
+  align-self: flex-end;
+  padding: 0.3rem 1.8rem !important;
+}
+
+.mt-custom-hero {
+  margin-top: 11rem !important;
+}
+
+.btn-solicitar-turno:hover {
+  background-color: var(--verde-oscuro);
+}
+
+.icono-mascota {
+  height: 6.4rem;
+  position: absolute;
+  right: -0.7rem;
+  bottom: 4.5rem;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+
+  .hero-overlay {
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    padding-top: 4rem;
+  }
+
+  .mt-custom-hero {
+    margin-top: 2rem !important;
+  }
+
+  .titulo-principal {
+    line-height: 1;
+  }
+
+  .hero-text-block {
+    text-align: center !important;
+    align-items: center !important;
+  }
+
+  .hero-text-block .titulo-principal,
+  .hero-text-block .subtitulo-hero {
+    text-align: center !important;
+    width: 100%;
+  }
+
+  .btn-solicitar-turno {
+    font-size: 1rem;
+    margin: 1.5rem auto 0 auto;
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    align-self: center !important;
+    width: auto; /* <-- esto es clave */
+    max-width: 90%;
+  }
+
+  .hero-overlay {
+    text-align: center !important;
+    align-items: center !important;
+  }
+
+}
+
+/* Ajustes específicos para hero */
 
 .btn-xl {
     padding: 1.25rem 2.5rem; /* más grande que btn-lg */
@@ -80,28 +237,47 @@ body {
 
 .whatsapp-float {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 12rem;
+    right: 2rem;
     z-index: 999;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none !important;
+    text-align: center;
 }
 
-.whatsapp-float img {
-    border-radius: 50%;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+.whatsapp-float p {
+    color: white;
+    font-size: 1.7rem;
+    margin-bottom: 0.5rem;
+    transition: transform 0.2s ease;
+    text-shadow:
+      -1px -1px 0 #000,
+       1px -1px 0 #000,
+      -1px  1px 0 #000,
+       1px  1px 0 #000;
 }
 
-/* Hover en desktop */
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .whatsapp-float {
+        bottom: 30px;
+        right: 2rem;
+    }
+}
+
+.whatsapp-float p {
+    color: white;
+    font-size: 1.7rem;
+}
+
+ /*Hover en desktop */
 .whatsapp-float:hover img {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    transform: scale(1.10);
 }
 
 /* Active en mobile o click en desktop */
 .whatsapp-float:active img {
-    transform: scale(0.95);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: scale(1.10);
 }
 
 .lista-indicaciones {
@@ -140,15 +316,4 @@ body {
 footer {
     background-color: #f8f9fa;
     color: #6c757d;
-}
-
-/* Cambia la imagen para pantallas md y menores (<=768px) */
-@media (max-width: 768px) {
-    .hero {
-        background-image: url('/assets/img/cover-origen-mobile.jpg');
-        background-attachment: scroll; /* Evita problemas con parallax en móviles */
-        background-size: cover;
-        background-position: center top;
-        height: 100vh;
-    }
 }
