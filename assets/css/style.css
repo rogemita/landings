@@ -58,6 +58,10 @@
   color: #fff;
 }
 
+.navbar-toggler {
+    color: white;
+}
+
 .titulo-principal {
   color: white;
   font-size: 4.5rem;
@@ -68,7 +72,7 @@
 body {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 400; /* regular para el cuerpo de texto */
-  font-size: 1rem;
+  font-size: 1.25rem;
   line-height: 1.6;
   color: #212529;
 }
@@ -301,6 +305,13 @@ h1, h2, h3, h4, h5, h6 {
   background-repeat: no-repeat;
   background-color: #104d1f; /* fallback sólido */
   color: white;
+}
+
+@media (max-width: 768px) {
+  .bg-textura-verde-logo {
+    background-position: right center;
+    background-size: auto 100%; /* o cover si querés estirar igual */
+  }
 }
 
 .flechas-invertidas {
