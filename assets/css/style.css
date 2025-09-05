@@ -298,6 +298,34 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
 }
 
+.borde-abajo {
+    position: relative;
+}
+
+.borde-abajo::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 4px;
+    background-color: #88c600; /* verde lima */
+}
+
+.borde-arriba {
+    position: relative;
+}
+
+.borde-arriba::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 4px;
+    background-color: #88c600;
+}
+
 .bg-textura-verde-logo {
   background-image: url('/assets/img/textura_2.jpg'); /* o textura-1.jpeg si preferís */
   background-size: cover;
