@@ -11,7 +11,7 @@ order: 1
     {% include {{ page.include_path }}/que_ofrecemos.html %}
   </section>
 
-  <section id="indicaciones" class="bg-textura-verde py-4 borde-abajo">
+  <section id="indicaciones" class="bg-textura-verde py-4">
     {% include {{ page.include_path }}/indicaciones.html %}
   </section>
 
